@@ -1,0 +1,91 @@
+$dark-blue: #0275D8;
+$light-blue: #BEE1FF;
+$curve: cubic-bezier(0.650, 0.000, 0.450, 1.000);
+
+.progress-bar.container {
+  display: flex;
+  justify-content: center;
+  margin: 64px auto 48px;
+
+  .progress {
+    margin-left: 64px;
+    position: relative;
+
+    /*the last progress icon*/
+    &:first-child {
+      margin-left: 0;
+      
+      .progress-line {
+        width: 0;
+      }
+    }
+    .progress-line {
+      position: absolute;
+      width: 80px;
+      height: 2px;
+      background: $light-blue;
+      top: 8px;
+      right: 50%;
+      z-index: -1;
+
+      &:after {
+        position: absolute;
+        content: "";
+        animation: growLine 1s linear forwards;
+        width: 0;
+        height: 2px;
+        background: $dark-blue;
+      }
+      @keyframes growLine {
+        100% {
+          width: 80px;
+        }
+      }
+    }
+
+    .icon-wrapper {
+      .checkmark {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: block;
+        stroke-width: 6;
+        stroke: #fff;
+        background: $dark-blue;
+        border: 2px solid #0275D8;
+
+        .checkmark__check {
+          stroke-dasharray: 48;
+          stroke-dashoffset: 48;
+          animation: stroke .3s $curve .8s forwards;
+        }
+        @keyframes stroke {
+          100% {
+            stroke-dashoffset: 0;
+          }
+        }
+        circle {
+          fill: $dark-blue;
+        }
+      }
+    }
+  }
+  .current {
+    .checkmark {
+      background: #FFFFFF !important;
+    }
+  }
+  .unfinish {
+    .progress-line {
+      &:after {
+        animation: none;
+      }
+    }
+    .icon-wrapper {
+      .checkmark {
+        background: #FFFFFF;
+        border: 2px solid #BEE1FF;
+      }
+    }
+  }
+}

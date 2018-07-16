@@ -1,0 +1,83 @@
+/* line 5, ../../sass/partials/progress.scss */
+.progress-bar.container {
+  display: flex;
+  justify-content: center;
+  margin: 64px auto 48px;
+}
+/* line 10, ../../sass/partials/progress.scss */
+.progress-bar.container .progress {
+  margin-left: 64px;
+  position: relative;
+  /*the last progress icon*/
+}
+/* line 15, ../../sass/partials/progress.scss */
+.progress-bar.container .progress:first-child {
+  margin-left: 0;
+}
+/* line 18, ../../sass/partials/progress.scss */
+.progress-bar.container .progress:first-child .progress-line {
+  width: 0;
+}
+/* line 22, ../../sass/partials/progress.scss */
+.progress-bar.container .progress .progress-line {
+  position: absolute;
+  width: 80px;
+  height: 2px;
+  background: #BEE1FF;
+  top: 8px;
+  right: 50%;
+  z-index: -1;
+}
+/* line 31, ../../sass/partials/progress.scss */
+.progress-bar.container .progress .progress-line:after {
+  position: absolute;
+  content: "";
+  animation: growLine 1s linear forwards;
+  width: 0;
+  height: 2px;
+  background: #0275D8;
+}
+@keyframes growLine {
+  100% {
+    width: 80px;
+  }
+}
+/* line 47, ../../sass/partials/progress.scss */
+.progress-bar.container .progress .icon-wrapper .checkmark {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 6;
+  stroke: #fff;
+  background: #0275D8;
+  border: 2px solid #0275D8;
+}
+/* line 57, ../../sass/partials/progress.scss */
+.progress-bar.container .progress .icon-wrapper .checkmark .checkmark__check {
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+/* line 67, ../../sass/partials/progress.scss */
+.progress-bar.container .progress .icon-wrapper .checkmark circle {
+  fill: #0275D8;
+}
+/* line 74, ../../sass/partials/progress.scss */
+.progress-bar.container .current .checkmark {
+  background: #FFFFFF !important;
+}
+/* line 80, ../../sass/partials/progress.scss */
+.progress-bar.container .unfinish .progress-line:after {
+  animation: none;
+}
+/* line 85, ../../sass/partials/progress.scss */
+.progress-bar.container .unfinish .icon-wrapper .checkmark {
+  background: #FFFFFF;
+  border: 2px solid #BEE1FF;
+}

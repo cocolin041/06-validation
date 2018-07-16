@@ -1,0 +1,110 @@
+/* line 2, ../../sass/partials/account.scss */
+.account .title, .general-info .title, .payment .title {
+  font-size: 48px;
+  color: #000000;
+  text-align: center;
+}
+/* line 7, ../../sass/partials/account.scss */
+.account .greet, .general-info .greet, .payment .greet {
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+}
+/* line 13, ../../sass/partials/account.scss */
+.account .form .name, .general-info .form .name, .payment .form .name {
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0;
+  margin-top: 24px;
+}
+/* line 18, ../../sass/partials/account.scss */
+.account .form .name span, .general-info .form .name span, .payment .form .name span {
+  font-size: 16px;
+  line-height: 24px;
+}
+/* line 23, ../../sass/partials/account.scss */
+.account .form .blank, .general-info .form .blank, .payment .form .blank {
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  width: 100%;
+  height: 52px;
+  margin-top: 8px;
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 24px;
+  padding-left: 20px;
+}
+/* line 40, ../../sass/partials/account.scss */
+.account .form .blank::placeholder, .general-info .form .blank::placeholder, .payment .form .blank::placeholder {
+  font-size: 20px;
+  color: #999999;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 24px;
+}
+/* line 49, ../../sass/partials/account.scss */
+.account .submit-btn, .general-info .submit-btn, .payment .submit-btn {
+  margin-top: 40px;
+  width: 100%;
+  height: 52px;
+  background: #BEE1FF;
+  border: 2px solid #BEE1FF;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 25px;
+}
+/* line 62, ../../sass/partials/account.scss */
+.account .submit-btn.active, .general-info .submit-btn.active, .payment .submit-btn.active {
+  background: #0275D8;
+}
+
+/* line 5, ../../sass/partials/general_info.scss */
+.general-info .two-form, .payment .two-form, .payment .three-form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+/* line 9, ../../sass/partials/general_info.scss */
+.general-info .two-form .form, .payment .two-form .form, .payment .three-form .form {
+  width: 220px;
+}
+/* line 11, ../../sass/partials/general_info.scss */
+.general-info .two-form .form .blank, .payment .two-form .form .blank, .payment .three-form .form .blank {
+  width: 100%;
+}
+/* line 17, ../../sass/partials/general_info.scss */
+.general-info .form .three-blank, .payment .form .three-blank, .general-info .form .two-blank, .payment .form .two-blank {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+/* line 22, ../../sass/partials/general_info.scss */
+.general-info .form .three-blank .blank, .payment .form .three-blank .blank, .general-info .form .two-blank .blank, .payment .form .two-blank .blank {
+  width: 140px;
+}
+/* line 28, ../../sass/partials/general_info.scss */
+.general-info .form .two-blank .blank, .payment .form .two-blank .blank {
+  width: 220px;
+}
+
+/* line 36, ../../sass/partials/general_info.scss */
+.payment .two-form, .payment .three-form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+/* line 43, ../../sass/partials/general_info.scss */
+.payment .three-form .form {
+  width: 140px;
+}
+/* line 45, ../../sass/partials/general_info.scss */
+.payment .three-form .form .blank {
+  width: 100%;
+}

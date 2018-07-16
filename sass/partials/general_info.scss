@@ -1,0 +1,50 @@
+@import "account";
+
+.general-info {
+  @extend .account ;
+  .two-form {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    .form {
+      width: 220px;
+      .blank {
+        width: 100%;
+      }
+    }
+  }
+  .form {
+    .three-blank {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      .blank {
+        width: 140px;
+      }
+    }
+    .two-blank {
+      @extend .three-blank ;
+      .blank {
+        width: 220px;
+      }
+    }
+  }
+}
+.payment {
+  @extend .general-info ;
+  .two-form {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .three-form {
+    @extend .two-form ;
+    .form {
+      width: 140px;
+      .blank {
+        width: 100%;
+      }
+    }
+  }
+}
