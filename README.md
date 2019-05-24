@@ -4,4 +4,4 @@
 https://bit.ly/2udrg3l
 
 ## Demo link: 
-https://cocolin041.github.io/06-validation/
+https://cocolin041.github.io/Validation-Form/
